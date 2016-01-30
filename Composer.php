@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Vinelab\NeoEloquent\Support;
 
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;

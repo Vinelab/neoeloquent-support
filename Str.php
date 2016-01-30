@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Vinelab\NeoEloquent\Support;
 
-use Illuminate\Support\Traits\Macroable;
+use Vinelab\NeoEloquent\Support\Traits\Macroable;
 
 class Str
 {
@@ -32,7 +32,8 @@ class Str
     /**
      * Transliterate a UTF-8 value to ASCII.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function ascii($value)
@@ -47,7 +48,8 @@ class Str
     /**
      * Convert a value to camel case.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function camel($value)
@@ -62,8 +64,9 @@ class Str
     /**
      * Determine if a given string contains a given substring.
      *
-     * @param  string  $haystack
-     * @param  string|array  $needles
+     * @param string       $haystack
+     * @param string|array $needles
+     *
      * @return bool
      */
     public static function contains($haystack, $needles)
@@ -80,8 +83,9 @@ class Str
     /**
      * Determine if a given string ends with a given substring.
      *
-     * @param  string  $haystack
-     * @param  string|array  $needles
+     * @param string       $haystack
+     * @param string|array $needles
+     *
      * @return bool
      */
     public static function endsWith($haystack, $needles)
@@ -98,8 +102,9 @@ class Str
     /**
      * Cap a string with a single instance of a given value.
      *
-     * @param  string  $value
-     * @param  string  $cap
+     * @param string $value
+     * @param string $cap
+     *
      * @return string
      */
     public static function finish($value, $cap)
@@ -112,8 +117,9 @@ class Str
     /**
      * Determine if a given string matches a given pattern.
      *
-     * @param  string  $pattern
-     * @param  string  $value
+     * @param string $pattern
+     * @param string $value
+     *
      * @return bool
      */
     public static function is($pattern, $value)
@@ -135,7 +141,8 @@ class Str
     /**
      * Return the length of the given string.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return int
      */
     public static function length($value)
@@ -146,9 +153,10 @@ class Str
     /**
      * Limit the number of characters in a string.
      *
-     * @param  string  $value
-     * @param  int     $limit
-     * @param  string  $end
+     * @param string $value
+     * @param int    $limit
+     * @param string $end
+     *
      * @return string
      */
     public static function limit($value, $limit = 100, $end = '...')
@@ -163,7 +171,8 @@ class Str
     /**
      * Convert the given string to lower-case.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function lower($value)
@@ -174,16 +183,17 @@ class Str
     /**
      * Limit the number of words in a string.
      *
-     * @param  string  $value
-     * @param  int     $words
-     * @param  string  $end
+     * @param string $value
+     * @param int    $words
+     * @param string $end
+     *
      * @return string
      */
     public static function words($value, $words = 100, $end = '...')
     {
         preg_match('/^\s*+(?:\S++\s*+){1,'.$words.'}/u', $value, $matches);
 
-        if (! isset($matches[0]) || strlen($value) === strlen($matches[0])) {
+        if (!isset($matches[0]) || strlen($value) === strlen($matches[0])) {
             return $value;
         }
 
@@ -193,8 +203,9 @@ class Str
     /**
      * Parse a Class@method style callback into class and method.
      *
-     * @param  string  $callback
-     * @param  string  $default
+     * @param string $callback
+     * @param string $default
+     *
      * @return array
      */
     public static function parseCallback($callback, $default)
@@ -205,8 +216,9 @@ class Str
     /**
      * Get the plural form of an English word.
      *
-     * @param  string  $value
-     * @param  int     $count
+     * @param string $value
+     * @param int    $count
+     *
      * @return string
      */
     public static function plural($value, $count = 2)
@@ -217,7 +229,8 @@ class Str
     /**
      * Generate a more truly "random" alpha-numeric string.
      *
-     * @param  int  $length
+     * @param int $length
+     *
      * @return string
      *
      * @throws \RuntimeException
@@ -242,7 +255,8 @@ class Str
      *
      * Should not be considered sufficient for cryptography, etc.
      *
-     * @param  int  $length
+     * @param int $length
+     *
      * @return string
      */
     public static function quickRandom($length = 16)
@@ -255,7 +269,8 @@ class Str
     /**
      * Convert the given string to upper-case.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function upper($value)
@@ -266,7 +281,8 @@ class Str
     /**
      * Convert the given string to title case.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function title($value)
@@ -277,7 +293,8 @@ class Str
     /**
      * Get the singular form of an English word.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function singular($value)
@@ -288,8 +305,9 @@ class Str
     /**
      * Generate a URL friendly "slug" from a given string.
      *
-     * @param  string  $title
-     * @param  string  $separator
+     * @param string $title
+     * @param string $separator
+     *
      * @return string
      */
     public static function slug($title, $separator = '-')
@@ -313,8 +331,9 @@ class Str
     /**
      * Convert a string to snake case.
      *
-     * @param  string  $value
-     * @param  string  $delimiter
+     * @param string $value
+     * @param string $delimiter
+     *
      * @return string
      */
     public static function snake($value, $delimiter = '_')
@@ -325,7 +344,7 @@ class Str
             return static::$snakeCache[$key];
         }
 
-        if (! ctype_lower($value)) {
+        if (!ctype_lower($value)) {
             $value = preg_replace('/\s+/', '', $value);
 
             $value = strtolower(preg_replace('/(.)(?=[A-Z])/', '$1'.$delimiter, $value));
@@ -337,8 +356,9 @@ class Str
     /**
      * Determine if a given string starts with a given substring.
      *
-     * @param  string  $haystack
-     * @param  string|array  $needles
+     * @param string       $haystack
+     * @param string|array $needles
+     *
      * @return bool
      */
     public static function startsWith($haystack, $needles)
@@ -355,7 +375,8 @@ class Str
     /**
      * Convert a value to studly caps case.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function studly($value)
@@ -374,9 +395,10 @@ class Str
     /**
      * Returns the portion of string specified by the start and length parameters.
      *
-     * @param  string  $string
-     * @param  int  $start
-     * @param  int|null  $length
+     * @param string   $string
+     * @param int      $start
+     * @param int|null $length
+     *
      * @return string
      */
     public static function substr($string, $start, $length = null)
@@ -387,7 +409,8 @@ class Str
     /**
      * Make a string's first character uppercase.
      *
-     * @param  string  $string
+     * @param string $string
+     *
      * @return string
      */
     public static function ucfirst($string)
@@ -413,119 +436,119 @@ class Str
         }
 
         return $charsArray = [
-            '0'    => ['°', '₀'],
-            '1'    => ['¹', '₁'],
-            '2'    => ['²', '₂'],
-            '3'    => ['³', '₃'],
-            '4'    => ['⁴', '₄'],
-            '5'    => ['⁵', '₅'],
-            '6'    => ['⁶', '₆'],
-            '7'    => ['⁷', '₇'],
-            '8'    => ['⁸', '₈'],
-            '9'    => ['⁹', '₉'],
-            'a'    => ['à', 'á', 'ả', 'ã', 'ạ', 'ă', 'ắ', 'ằ', 'ẳ', 'ẵ', 'ặ', 'â', 'ấ', 'ầ', 'ẩ', 'ẫ', 'ậ', 'ā', 'ą', 'å', 'α', 'ά', 'ἀ', 'ἁ', 'ἂ', 'ἃ', 'ἄ', 'ἅ', 'ἆ', 'ἇ', 'ᾀ', 'ᾁ', 'ᾂ', 'ᾃ', 'ᾄ', 'ᾅ', 'ᾆ', 'ᾇ', 'ὰ', 'ά', 'ᾰ', 'ᾱ', 'ᾲ', 'ᾳ', 'ᾴ', 'ᾶ', 'ᾷ', 'а', 'أ', 'အ', 'ာ', 'ါ', 'ǻ', 'ǎ', 'ª', 'ა', 'अ'],
-            'b'    => ['б', 'β', 'Ъ', 'Ь', 'ب', 'ဗ', 'ბ'],
-            'c'    => ['ç', 'ć', 'č', 'ĉ', 'ċ'],
-            'd'    => ['ď', 'ð', 'đ', 'ƌ', 'ȡ', 'ɖ', 'ɗ', 'ᵭ', 'ᶁ', 'ᶑ', 'д', 'δ', 'د', 'ض', 'ဍ', 'ဒ', 'დ'],
-            'e'    => ['é', 'è', 'ẻ', 'ẽ', 'ẹ', 'ê', 'ế', 'ề', 'ể', 'ễ', 'ệ', 'ë', 'ē', 'ę', 'ě', 'ĕ', 'ė', 'ε', 'έ', 'ἐ', 'ἑ', 'ἒ', 'ἓ', 'ἔ', 'ἕ', 'ὲ', 'έ', 'е', 'ё', 'э', 'є', 'ə', 'ဧ', 'ေ', 'ဲ', 'ე', 'ए'],
-            'f'    => ['ф', 'φ', 'ف', 'ƒ', 'ფ'],
-            'g'    => ['ĝ', 'ğ', 'ġ', 'ģ', 'г', 'ґ', 'γ', 'ج', 'ဂ', 'გ'],
-            'h'    => ['ĥ', 'ħ', 'η', 'ή', 'ح', 'ه', 'ဟ', 'ှ', 'ჰ'],
-            'i'    => ['í', 'ì', 'ỉ', 'ĩ', 'ị', 'î', 'ï', 'ī', 'ĭ', 'į', 'ı', 'ι', 'ί', 'ϊ', 'ΐ', 'ἰ', 'ἱ', 'ἲ', 'ἳ', 'ἴ', 'ἵ', 'ἶ', 'ἷ', 'ὶ', 'ί', 'ῐ', 'ῑ', 'ῒ', 'ΐ', 'ῖ', 'ῗ', 'і', 'ї', 'и', 'ဣ', 'ိ', 'ီ', 'ည်', 'ǐ', 'ი', 'इ'],
-            'j'    => ['ĵ', 'ј', 'Ј', 'ჯ'],
-            'k'    => ['ķ', 'ĸ', 'к', 'κ', 'Ķ', 'ق', 'ك', 'က', 'კ', 'ქ'],
-            'l'    => ['ł', 'ľ', 'ĺ', 'ļ', 'ŀ', 'л', 'λ', 'ل', 'လ', 'ლ'],
-            'm'    => ['м', 'μ', 'م', 'မ', 'მ'],
-            'n'    => ['ñ', 'ń', 'ň', 'ņ', 'ŉ', 'ŋ', 'ν', 'н', 'ن', 'န', 'ნ'],
-            'o'    => ['ó', 'ò', 'ỏ', 'õ', 'ọ', 'ô', 'ố', 'ồ', 'ổ', 'ỗ', 'ộ', 'ơ', 'ớ', 'ờ', 'ở', 'ỡ', 'ợ', 'ø', 'ō', 'ő', 'ŏ', 'ο', 'ὀ', 'ὁ', 'ὂ', 'ὃ', 'ὄ', 'ὅ', 'ὸ', 'ό', 'о', 'و', 'θ', 'ို', 'ǒ', 'ǿ', 'º', 'ო', 'ओ'],
-            'p'    => ['п', 'π', 'ပ', 'პ'],
-            'q'    => ['ყ'],
-            'r'    => ['ŕ', 'ř', 'ŗ', 'р', 'ρ', 'ر', 'რ'],
-            's'    => ['ś', 'š', 'ş', 'с', 'σ', 'ș', 'ς', 'س', 'ص', 'စ', 'ſ', 'ს'],
-            't'    => ['ť', 'ţ', 'т', 'τ', 'ț', 'ت', 'ط', 'ဋ', 'တ', 'ŧ', 'თ', 'ტ'],
-            'u'    => ['ú', 'ù', 'ủ', 'ũ', 'ụ', 'ư', 'ứ', 'ừ', 'ử', 'ữ', 'ự', 'û', 'ū', 'ů', 'ű', 'ŭ', 'ų', 'µ', 'у', 'ဉ', 'ု', 'ူ', 'ǔ', 'ǖ', 'ǘ', 'ǚ', 'ǜ', 'უ', 'उ'],
-            'v'    => ['в', 'ვ', 'ϐ'],
-            'w'    => ['ŵ', 'ω', 'ώ', 'ဝ', 'ွ'],
-            'x'    => ['χ', 'ξ'],
-            'y'    => ['ý', 'ỳ', 'ỷ', 'ỹ', 'ỵ', 'ÿ', 'ŷ', 'й', 'ы', 'υ', 'ϋ', 'ύ', 'ΰ', 'ي', 'ယ'],
-            'z'    => ['ź', 'ž', 'ż', 'з', 'ζ', 'ز', 'ဇ', 'ზ'],
-            'aa'   => ['ع', 'आ'],
-            'ae'   => ['ä', 'æ', 'ǽ'],
-            'ai'   => ['ऐ'],
-            'at'   => ['@'],
-            'ch'   => ['ч', 'ჩ', 'ჭ'],
-            'dj'   => ['ђ', 'đ'],
-            'dz'   => ['џ', 'ძ'],
-            'ei'   => ['ऍ'],
-            'gh'   => ['غ', 'ღ'],
-            'ii'   => ['ई'],
-            'ij'   => ['ĳ'],
-            'kh'   => ['х', 'خ', 'ხ'],
-            'lj'   => ['љ'],
-            'nj'   => ['њ'],
-            'oe'   => ['ö', 'œ'],
-            'oi'   => ['ऑ'],
-            'oii'  => ['ऒ'],
-            'ps'   => ['ψ'],
-            'sh'   => ['ш', 'შ'],
+            '0' => ['°', '₀'],
+            '1' => ['¹', '₁'],
+            '2' => ['²', '₂'],
+            '3' => ['³', '₃'],
+            '4' => ['⁴', '₄'],
+            '5' => ['⁵', '₅'],
+            '6' => ['⁶', '₆'],
+            '7' => ['⁷', '₇'],
+            '8' => ['⁸', '₈'],
+            '9' => ['⁹', '₉'],
+            'a' => ['à', 'á', 'ả', 'ã', 'ạ', 'ă', 'ắ', 'ằ', 'ẳ', 'ẵ', 'ặ', 'â', 'ấ', 'ầ', 'ẩ', 'ẫ', 'ậ', 'ā', 'ą', 'å', 'α', 'ά', 'ἀ', 'ἁ', 'ἂ', 'ἃ', 'ἄ', 'ἅ', 'ἆ', 'ἇ', 'ᾀ', 'ᾁ', 'ᾂ', 'ᾃ', 'ᾄ', 'ᾅ', 'ᾆ', 'ᾇ', 'ὰ', 'ά', 'ᾰ', 'ᾱ', 'ᾲ', 'ᾳ', 'ᾴ', 'ᾶ', 'ᾷ', 'а', 'أ', 'အ', 'ာ', 'ါ', 'ǻ', 'ǎ', 'ª', 'ა', 'अ'],
+            'b' => ['б', 'β', 'Ъ', 'Ь', 'ب', 'ဗ', 'ბ'],
+            'c' => ['ç', 'ć', 'č', 'ĉ', 'ċ'],
+            'd' => ['ď', 'ð', 'đ', 'ƌ', 'ȡ', 'ɖ', 'ɗ', 'ᵭ', 'ᶁ', 'ᶑ', 'д', 'δ', 'د', 'ض', 'ဍ', 'ဒ', 'დ'],
+            'e' => ['é', 'è', 'ẻ', 'ẽ', 'ẹ', 'ê', 'ế', 'ề', 'ể', 'ễ', 'ệ', 'ë', 'ē', 'ę', 'ě', 'ĕ', 'ė', 'ε', 'έ', 'ἐ', 'ἑ', 'ἒ', 'ἓ', 'ἔ', 'ἕ', 'ὲ', 'έ', 'е', 'ё', 'э', 'є', 'ə', 'ဧ', 'ေ', 'ဲ', 'ე', 'ए'],
+            'f' => ['ф', 'φ', 'ف', 'ƒ', 'ფ'],
+            'g' => ['ĝ', 'ğ', 'ġ', 'ģ', 'г', 'ґ', 'γ', 'ج', 'ဂ', 'გ'],
+            'h' => ['ĥ', 'ħ', 'η', 'ή', 'ح', 'ه', 'ဟ', 'ှ', 'ჰ'],
+            'i' => ['í', 'ì', 'ỉ', 'ĩ', 'ị', 'î', 'ï', 'ī', 'ĭ', 'į', 'ı', 'ι', 'ί', 'ϊ', 'ΐ', 'ἰ', 'ἱ', 'ἲ', 'ἳ', 'ἴ', 'ἵ', 'ἶ', 'ἷ', 'ὶ', 'ί', 'ῐ', 'ῑ', 'ῒ', 'ΐ', 'ῖ', 'ῗ', 'і', 'ї', 'и', 'ဣ', 'ိ', 'ီ', 'ည်', 'ǐ', 'ი', 'इ'],
+            'j' => ['ĵ', 'ј', 'Ј', 'ჯ'],
+            'k' => ['ķ', 'ĸ', 'к', 'κ', 'Ķ', 'ق', 'ك', 'က', 'კ', 'ქ'],
+            'l' => ['ł', 'ľ', 'ĺ', 'ļ', 'ŀ', 'л', 'λ', 'ل', 'လ', 'ლ'],
+            'm' => ['м', 'μ', 'م', 'မ', 'მ'],
+            'n' => ['ñ', 'ń', 'ň', 'ņ', 'ŉ', 'ŋ', 'ν', 'н', 'ن', 'န', 'ნ'],
+            'o' => ['ó', 'ò', 'ỏ', 'õ', 'ọ', 'ô', 'ố', 'ồ', 'ổ', 'ỗ', 'ộ', 'ơ', 'ớ', 'ờ', 'ở', 'ỡ', 'ợ', 'ø', 'ō', 'ő', 'ŏ', 'ο', 'ὀ', 'ὁ', 'ὂ', 'ὃ', 'ὄ', 'ὅ', 'ὸ', 'ό', 'о', 'و', 'θ', 'ို', 'ǒ', 'ǿ', 'º', 'ო', 'ओ'],
+            'p' => ['п', 'π', 'ပ', 'პ'],
+            'q' => ['ყ'],
+            'r' => ['ŕ', 'ř', 'ŗ', 'р', 'ρ', 'ر', 'რ'],
+            's' => ['ś', 'š', 'ş', 'с', 'σ', 'ș', 'ς', 'س', 'ص', 'စ', 'ſ', 'ს'],
+            't' => ['ť', 'ţ', 'т', 'τ', 'ț', 'ت', 'ط', 'ဋ', 'တ', 'ŧ', 'თ', 'ტ'],
+            'u' => ['ú', 'ù', 'ủ', 'ũ', 'ụ', 'ư', 'ứ', 'ừ', 'ử', 'ữ', 'ự', 'û', 'ū', 'ů', 'ű', 'ŭ', 'ų', 'µ', 'у', 'ဉ', 'ု', 'ူ', 'ǔ', 'ǖ', 'ǘ', 'ǚ', 'ǜ', 'უ', 'उ'],
+            'v' => ['в', 'ვ', 'ϐ'],
+            'w' => ['ŵ', 'ω', 'ώ', 'ဝ', 'ွ'],
+            'x' => ['χ', 'ξ'],
+            'y' => ['ý', 'ỳ', 'ỷ', 'ỹ', 'ỵ', 'ÿ', 'ŷ', 'й', 'ы', 'υ', 'ϋ', 'ύ', 'ΰ', 'ي', 'ယ'],
+            'z' => ['ź', 'ž', 'ż', 'з', 'ζ', 'ز', 'ဇ', 'ზ'],
+            'aa' => ['ع', 'आ'],
+            'ae' => ['ä', 'æ', 'ǽ'],
+            'ai' => ['ऐ'],
+            'at' => ['@'],
+            'ch' => ['ч', 'ჩ', 'ჭ'],
+            'dj' => ['ђ', 'đ'],
+            'dz' => ['џ', 'ძ'],
+            'ei' => ['ऍ'],
+            'gh' => ['غ', 'ღ'],
+            'ii' => ['ई'],
+            'ij' => ['ĳ'],
+            'kh' => ['х', 'خ', 'ხ'],
+            'lj' => ['љ'],
+            'nj' => ['њ'],
+            'oe' => ['ö', 'œ'],
+            'oi' => ['ऑ'],
+            'oii' => ['ऒ'],
+            'ps' => ['ψ'],
+            'sh' => ['ш', 'შ'],
             'shch' => ['щ'],
-            'ss'   => ['ß'],
-            'sx'   => ['ŝ'],
-            'th'   => ['þ', 'ϑ', 'ث', 'ذ', 'ظ'],
-            'ts'   => ['ц', 'ც', 'წ'],
-            'ue'   => ['ü'],
-            'uu'   => ['ऊ'],
-            'ya'   => ['я'],
-            'yu'   => ['ю'],
-            'zh'   => ['ж', 'ჟ'],
-            '(c)'  => ['©'],
-            'A'    => ['Á', 'À', 'Ả', 'Ã', 'Ạ', 'Ă', 'Ắ', 'Ằ', 'Ẳ', 'Ẵ', 'Ặ', 'Â', 'Ấ', 'Ầ', 'Ẩ', 'Ẫ', 'Ậ', 'Å', 'Ā', 'Ą', 'Α', 'Ά', 'Ἀ', 'Ἁ', 'Ἂ', 'Ἃ', 'Ἄ', 'Ἅ', 'Ἆ', 'Ἇ', 'ᾈ', 'ᾉ', 'ᾊ', 'ᾋ', 'ᾌ', 'ᾍ', 'ᾎ', 'ᾏ', 'Ᾰ', 'Ᾱ', 'Ὰ', 'Ά', 'ᾼ', 'А', 'Ǻ', 'Ǎ'],
-            'B'    => ['Б', 'Β', 'ब'],
-            'C'    => ['Ç', 'Ć', 'Č', 'Ĉ', 'Ċ'],
-            'D'    => ['Ď', 'Ð', 'Đ', 'Ɖ', 'Ɗ', 'Ƌ', 'ᴅ', 'ᴆ', 'Д', 'Δ'],
-            'E'    => ['É', 'È', 'Ẻ', 'Ẽ', 'Ẹ', 'Ê', 'Ế', 'Ề', 'Ể', 'Ễ', 'Ệ', 'Ë', 'Ē', 'Ę', 'Ě', 'Ĕ', 'Ė', 'Ε', 'Έ', 'Ἐ', 'Ἑ', 'Ἒ', 'Ἓ', 'Ἔ', 'Ἕ', 'Έ', 'Ὲ', 'Е', 'Ё', 'Э', 'Є', 'Ə'],
-            'F'    => ['Ф', 'Φ'],
-            'G'    => ['Ğ', 'Ġ', 'Ģ', 'Г', 'Ґ', 'Γ'],
-            'H'    => ['Η', 'Ή', 'Ħ'],
-            'I'    => ['Í', 'Ì', 'Ỉ', 'Ĩ', 'Ị', 'Î', 'Ï', 'Ī', 'Ĭ', 'Į', 'İ', 'Ι', 'Ί', 'Ϊ', 'Ἰ', 'Ἱ', 'Ἳ', 'Ἴ', 'Ἵ', 'Ἶ', 'Ἷ', 'Ῐ', 'Ῑ', 'Ὶ', 'Ί', 'И', 'І', 'Ї', 'Ǐ', 'ϒ'],
-            'K'    => ['К', 'Κ'],
-            'L'    => ['Ĺ', 'Ł', 'Л', 'Λ', 'Ļ', 'Ľ', 'Ŀ', 'ल'],
-            'M'    => ['М', 'Μ'],
-            'N'    => ['Ń', 'Ñ', 'Ň', 'Ņ', 'Ŋ', 'Н', 'Ν'],
-            'O'    => ['Ó', 'Ò', 'Ỏ', 'Õ', 'Ọ', 'Ô', 'Ố', 'Ồ', 'Ổ', 'Ỗ', 'Ộ', 'Ơ', 'Ớ', 'Ờ', 'Ở', 'Ỡ', 'Ợ', 'Ø', 'Ō', 'Ő', 'Ŏ', 'Ο', 'Ό', 'Ὀ', 'Ὁ', 'Ὂ', 'Ὃ', 'Ὄ', 'Ὅ', 'Ὸ', 'Ό', 'О', 'Θ', 'Ө', 'Ǒ', 'Ǿ'],
-            'P'    => ['П', 'Π'],
-            'R'    => ['Ř', 'Ŕ', 'Р', 'Ρ', 'Ŗ'],
-            'S'    => ['Ş', 'Ŝ', 'Ș', 'Š', 'Ś', 'С', 'Σ'],
-            'T'    => ['Ť', 'Ţ', 'Ŧ', 'Ț', 'Т', 'Τ'],
-            'U'    => ['Ú', 'Ù', 'Ủ', 'Ũ', 'Ụ', 'Ư', 'Ứ', 'Ừ', 'Ử', 'Ữ', 'Ự', 'Û', 'Ū', 'Ů', 'Ű', 'Ŭ', 'Ų', 'У', 'Ǔ', 'Ǖ', 'Ǘ', 'Ǚ', 'Ǜ'],
-            'V'    => ['В'],
-            'W'    => ['Ω', 'Ώ', 'Ŵ'],
-            'X'    => ['Χ', 'Ξ'],
-            'Y'    => ['Ý', 'Ỳ', 'Ỷ', 'Ỹ', 'Ỵ', 'Ÿ', 'Ῠ', 'Ῡ', 'Ὺ', 'Ύ', 'Ы', 'Й', 'Υ', 'Ϋ', 'Ŷ'],
-            'Z'    => ['Ź', 'Ž', 'Ż', 'З', 'Ζ'],
-            'AE'   => ['Ä', 'Æ', 'Ǽ'],
-            'CH'   => ['Ч'],
-            'DJ'   => ['Ђ'],
-            'DZ'   => ['Џ'],
-            'GX'   => ['Ĝ'],
-            'HX'   => ['Ĥ'],
-            'IJ'   => ['Ĳ'],
-            'JX'   => ['Ĵ'],
-            'KH'   => ['Х'],
-            'LJ'   => ['Љ'],
-            'NJ'   => ['Њ'],
-            'OE'   => ['Ö', 'Œ'],
-            'PS'   => ['Ψ'],
-            'SH'   => ['Ш'],
+            'ss' => ['ß'],
+            'sx' => ['ŝ'],
+            'th' => ['þ', 'ϑ', 'ث', 'ذ', 'ظ'],
+            'ts' => ['ц', 'ც', 'წ'],
+            'ue' => ['ü'],
+            'uu' => ['ऊ'],
+            'ya' => ['я'],
+            'yu' => ['ю'],
+            'zh' => ['ж', 'ჟ'],
+            '(c)' => ['©'],
+            'A' => ['Á', 'À', 'Ả', 'Ã', 'Ạ', 'Ă', 'Ắ', 'Ằ', 'Ẳ', 'Ẵ', 'Ặ', 'Â', 'Ấ', 'Ầ', 'Ẩ', 'Ẫ', 'Ậ', 'Å', 'Ā', 'Ą', 'Α', 'Ά', 'Ἀ', 'Ἁ', 'Ἂ', 'Ἃ', 'Ἄ', 'Ἅ', 'Ἆ', 'Ἇ', 'ᾈ', 'ᾉ', 'ᾊ', 'ᾋ', 'ᾌ', 'ᾍ', 'ᾎ', 'ᾏ', 'Ᾰ', 'Ᾱ', 'Ὰ', 'Ά', 'ᾼ', 'А', 'Ǻ', 'Ǎ'],
+            'B' => ['Б', 'Β', 'ब'],
+            'C' => ['Ç', 'Ć', 'Č', 'Ĉ', 'Ċ'],
+            'D' => ['Ď', 'Ð', 'Đ', 'Ɖ', 'Ɗ', 'Ƌ', 'ᴅ', 'ᴆ', 'Д', 'Δ'],
+            'E' => ['É', 'È', 'Ẻ', 'Ẽ', 'Ẹ', 'Ê', 'Ế', 'Ề', 'Ể', 'Ễ', 'Ệ', 'Ë', 'Ē', 'Ę', 'Ě', 'Ĕ', 'Ė', 'Ε', 'Έ', 'Ἐ', 'Ἑ', 'Ἒ', 'Ἓ', 'Ἔ', 'Ἕ', 'Έ', 'Ὲ', 'Е', 'Ё', 'Э', 'Є', 'Ə'],
+            'F' => ['Ф', 'Φ'],
+            'G' => ['Ğ', 'Ġ', 'Ģ', 'Г', 'Ґ', 'Γ'],
+            'H' => ['Η', 'Ή', 'Ħ'],
+            'I' => ['Í', 'Ì', 'Ỉ', 'Ĩ', 'Ị', 'Î', 'Ï', 'Ī', 'Ĭ', 'Į', 'İ', 'Ι', 'Ί', 'Ϊ', 'Ἰ', 'Ἱ', 'Ἳ', 'Ἴ', 'Ἵ', 'Ἶ', 'Ἷ', 'Ῐ', 'Ῑ', 'Ὶ', 'Ί', 'И', 'І', 'Ї', 'Ǐ', 'ϒ'],
+            'K' => ['К', 'Κ'],
+            'L' => ['Ĺ', 'Ł', 'Л', 'Λ', 'Ļ', 'Ľ', 'Ŀ', 'ल'],
+            'M' => ['М', 'Μ'],
+            'N' => ['Ń', 'Ñ', 'Ň', 'Ņ', 'Ŋ', 'Н', 'Ν'],
+            'O' => ['Ó', 'Ò', 'Ỏ', 'Õ', 'Ọ', 'Ô', 'Ố', 'Ồ', 'Ổ', 'Ỗ', 'Ộ', 'Ơ', 'Ớ', 'Ờ', 'Ở', 'Ỡ', 'Ợ', 'Ø', 'Ō', 'Ő', 'Ŏ', 'Ο', 'Ό', 'Ὀ', 'Ὁ', 'Ὂ', 'Ὃ', 'Ὄ', 'Ὅ', 'Ὸ', 'Ό', 'О', 'Θ', 'Ө', 'Ǒ', 'Ǿ'],
+            'P' => ['П', 'Π'],
+            'R' => ['Ř', 'Ŕ', 'Р', 'Ρ', 'Ŗ'],
+            'S' => ['Ş', 'Ŝ', 'Ș', 'Š', 'Ś', 'С', 'Σ'],
+            'T' => ['Ť', 'Ţ', 'Ŧ', 'Ț', 'Т', 'Τ'],
+            'U' => ['Ú', 'Ù', 'Ủ', 'Ũ', 'Ụ', 'Ư', 'Ứ', 'Ừ', 'Ử', 'Ữ', 'Ự', 'Û', 'Ū', 'Ů', 'Ű', 'Ŭ', 'Ų', 'У', 'Ǔ', 'Ǖ', 'Ǘ', 'Ǚ', 'Ǜ'],
+            'V' => ['В'],
+            'W' => ['Ω', 'Ώ', 'Ŵ'],
+            'X' => ['Χ', 'Ξ'],
+            'Y' => ['Ý', 'Ỳ', 'Ỷ', 'Ỹ', 'Ỵ', 'Ÿ', 'Ῠ', 'Ῡ', 'Ὺ', 'Ύ', 'Ы', 'Й', 'Υ', 'Ϋ', 'Ŷ'],
+            'Z' => ['Ź', 'Ž', 'Ż', 'З', 'Ζ'],
+            'AE' => ['Ä', 'Æ', 'Ǽ'],
+            'CH' => ['Ч'],
+            'DJ' => ['Ђ'],
+            'DZ' => ['Џ'],
+            'GX' => ['Ĝ'],
+            'HX' => ['Ĥ'],
+            'IJ' => ['Ĳ'],
+            'JX' => ['Ĵ'],
+            'KH' => ['Х'],
+            'LJ' => ['Љ'],
+            'NJ' => ['Њ'],
+            'OE' => ['Ö', 'Œ'],
+            'PS' => ['Ψ'],
+            'SH' => ['Ш'],
             'SHCH' => ['Щ'],
-            'SS'   => ['ẞ'],
-            'TH'   => ['Þ'],
-            'TS'   => ['Ц'],
-            'UE'   => ['Ü'],
-            'YA'   => ['Я'],
-            'YU'   => ['Ю'],
-            'ZH'   => ['Ж'],
-            ' '    => ["\xC2\xA0", "\xE2\x80\x80", "\xE2\x80\x81", "\xE2\x80\x82", "\xE2\x80\x83", "\xE2\x80\x84", "\xE2\x80\x85", "\xE2\x80\x86", "\xE2\x80\x87", "\xE2\x80\x88", "\xE2\x80\x89", "\xE2\x80\x8A", "\xE2\x80\xAF", "\xE2\x81\x9F", "\xE3\x80\x80"],
+            'SS' => ['ẞ'],
+            'TH' => ['Þ'],
+            'TS' => ['Ц'],
+            'UE' => ['Ü'],
+            'YA' => ['Я'],
+            'YU' => ['Ю'],
+            'ZH' => ['Ж'],
+            ' ' => ["\xC2\xA0", "\xE2\x80\x80", "\xE2\x80\x81", "\xE2\x80\x82", "\xE2\x80\x83", "\xE2\x80\x84", "\xE2\x80\x85", "\xE2\x80\x86", "\xE2\x80\x87", "\xE2\x80\x88", "\xE2\x80\x89", "\xE2\x80\x8A", "\xE2\x80\xAF", "\xE2\x81\x9F", "\xE3\x80\x80"],
         ];
     }
 }

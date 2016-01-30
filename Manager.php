@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Vinelab\NeoEloquent\Support;
 
 use Closure;
 use InvalidArgumentException;

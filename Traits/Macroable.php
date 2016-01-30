@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Traits;
+namespace Vinelab\NeoEloquent\Support\Traits;
 
 use Closure;
 use BadMethodCallException;

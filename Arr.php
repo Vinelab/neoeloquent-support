@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Vinelab\NeoEloquent\Support;
 
 use ArrayAccess;
-use Illuminate\Support\Traits\Macroable;
+use Vinelab\NeoEloquent\Support\Traits\Macroable;
 
 class Arr
 {
