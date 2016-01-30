@@ -3,7 +3,7 @@
 namespace Vinelab\NeoEloquent\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Bus\Dispatcher
+ * @see \Vinelab\NeoEloquent\Contracts\Bus\Dispatcher
  */
 class Bus extends Facade
 {
@@ -14,6 +14,6 @@ class Bus extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Bus\Dispatcher';
+        return 'Vinelab\NeoEloquent\Contracts\Bus\Dispatcher';
     }
 }

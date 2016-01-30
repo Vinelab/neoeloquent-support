@@ -3,7 +3,7 @@
 namespace Vinelab\NeoEloquent\Support;
 
 use Countable;
-use Illuminate\Contracts\Support\MessageBag as MessageBagContract;
+use Vinelab\NeoEloquent\Contracts\Support\MessageBag as MessageBagContract;
 
 class ViewErrorBag implements Countable
 {
@@ -29,7 +29,7 @@ class ViewErrorBag implements Countable
      * Get a MessageBag instance from the bags.
      *
      * @param  string  $key
-     * @return \Illuminate\Contracts\Support\MessageBag
+     * @return \Vinelab\NeoEloquent\Contracts\Support\MessageBag
      */
     public function getBag($key)
     {
@@ -50,7 +50,7 @@ class ViewErrorBag implements Countable
      * Add a new MessageBag instance to the bags.
      *
      * @param  string  $key
-     * @param  \Illuminate\Contracts\Support\MessageBag  $bag
+     * @param  \Vinelab\NeoEloquent\Contracts\Support\MessageBag  $bag
      * @return $this
      */
     public function put($key, MessageBagContract $bag)
@@ -86,7 +86,7 @@ class ViewErrorBag implements Countable
      * Dynamically access a view error bag.
      *
      * @param  string  $key
-     * @return \Illuminate\Contracts\Support\MessageBag
+     * @return \Vinelab\NeoEloquent\Contracts\Support\MessageBag
      */
     public function __get($key)
     {
@@ -97,7 +97,7 @@ class ViewErrorBag implements Countable
      * Dynamically set a view error bag.
      *
      * @param  string  $key
-     * @param  \Illuminate\Contracts\Support\MessageBag  $value
+     * @param  \Vinelab\NeoEloquent\Contracts\Support\MessageBag  $value
      * @return void
      */
     public function __set($key, $value)

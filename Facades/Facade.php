@@ -11,7 +11,7 @@ abstract class Facade
     /**
      * The application instance being facaded.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Vinelab\NeoEloquent\Contracts\Foundation\Application
      */
     protected static $app;
 
@@ -175,7 +175,7 @@ abstract class Facade
     /**
      * Get the application instance behind the facade.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Vinelab\NeoEloquent\Contracts\Foundation\Application
      */
     public static function getFacadeApplication()
     {
@@ -185,7 +185,7 @@ abstract class Facade
     /**
      * Set the application instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Vinelab\NeoEloquent\Contracts\Foundation\Application  $app
      * @return void
      */
     public static function setFacadeApplication($app)

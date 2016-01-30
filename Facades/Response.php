@@ -3,7 +3,7 @@
 namespace Vinelab\NeoEloquent\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Routing\ResponseFactory
+ * @see \Vinelab\NeoEloquent\Contracts\Routing\ResponseFactory
  */
 class Response extends Facade
 {
@@ -14,6 +14,6 @@ class Response extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Routing\ResponseFactory';
+        return 'Vinelab\NeoEloquent\Contracts\Routing\ResponseFactory';
     }
 }

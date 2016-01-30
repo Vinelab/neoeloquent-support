@@ -4,8 +4,8 @@ namespace Vinelab\NeoEloquent\Support;
 
 use ArrayAccess;
 use JsonSerializable;
-use Illuminate\Contracts\Support\Jsonable;
-use Illuminate\Contracts\Support\Arrayable;
+use Vinelab\NeoEloquent\Contracts\Support\Jsonable;
+use Vinelab\NeoEloquent\Contracts\Support\Arrayable;
 
 class Fluent implements ArrayAccess, Arrayable, Jsonable, JsonSerializable
 {

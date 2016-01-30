@@ -3,7 +3,7 @@
 namespace Vinelab\NeoEloquent\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Console\Kernel
+ * @see \Vinelab\NeoEloquent\Contracts\Console\Kernel
  */
 class Artisan extends Facade
 {
@@ -14,6 +14,6 @@ class Artisan extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Console\Kernel';
+        return 'Vinelab\NeoEloquent\Contracts\Console\Kernel';
     }
 }

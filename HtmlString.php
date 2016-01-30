@@ -2,7 +2,7 @@
 
 namespace Vinelab\NeoEloquent\Support;
 
-use Illuminate\Contracts\Support\Htmlable;
+use Vinelab\NeoEloquent\Contracts\Support\Htmlable;
 
 class HtmlString implements Htmlable
 {

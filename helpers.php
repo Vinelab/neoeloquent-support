@@ -4,7 +4,7 @@ use Vinelab\NeoEloquent\Support\Arr;
 use Vinelab\NeoEloquent\Support\Str;
 use Vinelab\NeoEloquent\Support\Collection;
 use Vinelab\NeoEloquent\Support\Debug\Dumper;
-use Illuminate\Contracts\Support\Htmlable;
+use Vinelab\NeoEloquent\Contracts\Support\Htmlable;
 
 if (! function_exists('append_config')) {
     /**
@@ -370,7 +370,7 @@ if (! function_exists('collect')) {
      * Create a collection from the given value.
      *
      * @param  mixed  $value
-     * @return \Illuminate\Support\Collection
+     * @return \Vinelab\NeoEloquent\Support\Collection
      */
     function collect($value = null)
     {
@@ -454,7 +454,7 @@ if (! function_exists('e')) {
     /**
      * Escape HTML entities in a string.
      *
-     * @param  \Illuminate\Contracts\Support\Htmlable|string  $value
+     * @param  \Vinelab\NeoEloquent\Contracts\Support\Htmlable|string  $value
      * @return string
      */
     function e($value)

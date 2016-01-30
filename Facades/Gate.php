@@ -3,7 +3,7 @@
 namespace Vinelab\NeoEloquent\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Auth\Access\Gate
+ * @see \Vinelab\NeoEloquent\Contracts\Auth\Access\Gate
  */
 class Gate extends Facade
 {
@@ -14,6 +14,6 @@ class Gate extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Auth\Access\Gate';
+        return 'Vinelab\NeoEloquent\Contracts\Auth\Access\Gate';
     }
 }
