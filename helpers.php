@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Debug\Dumper;
+use Vinelab\NeoEloquent\Support\Arr;
+use Vinelab\NeoEloquent\Support\Str;
+use Vinelab\NeoEloquent\Support\Collection;
+use Vinelab\NeoEloquent\Support\Debug\Dumper;
 use Illuminate\Contracts\Support\Htmlable;
 
 if (! function_exists('append_config')) {

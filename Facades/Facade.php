@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Vinelab\NeoEloquent\Support\Facades;
 
 use Mockery;
 use RuntimeException;
