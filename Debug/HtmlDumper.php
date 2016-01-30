@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Debug;
+namespace Vinelab\NeoEloquent\Support\Debug;
 
 use Symfony\Component\VarDumper\Dumper\HtmlDumper as SymfonyHtmlDumper;
 

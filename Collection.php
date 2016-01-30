@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Vinelab\NeoEloquent\Support;
 
 use Countable;
 use ArrayAccess;
@@ -9,9 +9,9 @@ use CachingIterator;
 use JsonSerializable;
 use IteratorAggregate;
 use InvalidArgumentException;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Contracts\Support\Jsonable;
-use Illuminate\Contracts\Support\Arrayable;
+use Vinelab\NeoEloquent\Support\Traits\Macroable;
+use Vinelab\NeoEloquent\Contracts\Support\Jsonable;
+use Vinelab\NeoEloquent\Contracts\Support\Arrayable;
 
 class Collection implements ArrayAccess, Arrayable, Countable, IteratorAggregate, Jsonable, JsonSerializable
 {

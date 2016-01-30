@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Vinelab\NeoEloquent\Support;
 
 use BadMethodCallException;
 use Illuminate\Console\Events\ArtisanStarting;

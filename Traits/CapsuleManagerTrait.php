@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support\Traits;
+namespace Vinelab\NeoEloquent\Support\Traits;
 
-use Illuminate\Support\Fluent;
+use Vinelab\NeoEloquent\Support\Fluent;
 use Illuminate\Contracts\Container\Container;
 
 trait CapsuleManagerTrait
