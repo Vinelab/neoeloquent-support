@@ -365,19 +365,6 @@ if (! function_exists('class_uses_recursive')) {
     }
 }
 
-if (! function_exists('collect')) {
-    /**
-     * Create a collection from the given value.
-     *
-     * @param  mixed  $value
-     * @return \Vinelab\NeoEloquent\Support\Collection
-     */
-    function collect($value = null)
-    {
-        return new Collection($value);
-    }
-}
-
 if (! function_exists('data_get')) {
     /**
      * Get an item from an array or object using "dot" notation.
